@@ -1,0 +1,25 @@
+<header class="header header-6">
+    <div class="branding">
+        <a class="nav-link">
+        <clr-icon shape="bullseye"></clr-icon>
+        <span class="title">Open Trivia</span>
+        </a>
+    </div>
+    <div class="header-nav">
+        <a class="nav-link nav-text" 
+        routerLink="/" 
+        routerLinkActive="active" 
+        [routerLinkActiveOptions]="{exact: true}">Dashboard
+        </a>
+        <a class="nav-link nav-text" 
+        routerLink="/game" 
+        routerLinkActive="active" 
+        [routerLinkActiveOptions]="{exact: true}">New Game
+        </a>
+    </div>
+    <div class="header-actions">
+        <a class="nav-link nav-icon">
+        <clr-icon shape="cog"></clr-icon>
+        </a>
+    </div>
+</header>
