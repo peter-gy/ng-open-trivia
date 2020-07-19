@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionService } from '../../services/question.service';
-import { QuestionDto, Type, Difficulty } from 'src/app/model/question';
+import { QuestionDto, Question } from 'src/app/model/question';
 
 @Component({
   selector: 'app-game',
@@ -11,15 +11,12 @@ export class GameComponent implements OnInit {
 
   constructor(private questionService: QuestionService) { }
 
+  questions: Question[] = [];
+
   ngOnInit(): void {
-    let dto: QuestionDto = 
-    {
-      numberOfQuestions: 10,
-      category: 11,
-      difficulty: Difficulty.EASY,
-      type: Type.MULTIPLE
-    }
-    this.questionService.loadQuestions(dto).subscribe(e => console.log(e));
+    this.questionService
+    .loadQuestions(10, 11, 'medium', 'multiple')
+    .subscribe((data: Question[]) => this.questions = this.questions.concat(data));
   }
 
 }

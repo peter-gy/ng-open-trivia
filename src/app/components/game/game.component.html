@@ -1,1 +1,14 @@
-<p>game works!</p>
+<div>
+    <ul *ngFor="let q of questions">
+        <li>{{q.category}}</li>
+        <li>{{q.type}}</li>
+        <li>{{q.difficulty}}</li>
+        <li>{{q.question}}</li>
+        <li>{{q.correct_answer}}</li>
+        <ul *ngFor="let ans of q.incorrect_answers">
+            <li>{{ans}}</li>
+        </ul>
+        <hr>
+    </ul>
+    <app-game-wizard></app-game-wizard>
+</div>

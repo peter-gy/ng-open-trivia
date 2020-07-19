@@ -12,13 +12,15 @@ import { QuestionService } from './services/question.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
 import { GameComponent } from './components/game/game.component';
+import { GameWizardComponent } from './components/game-wizard/game-wizard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     HeaderComponent,
-    GameComponent
+    GameComponent,
+    GameWizardComponent
   ],
   imports: [
     BrowserModule,
